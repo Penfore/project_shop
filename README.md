@@ -1,16 +1,11 @@
 # project_shop
 
-A new Flutter project.
+A simple shop app to learn State Management in Flutter.
 
-## Getting Started
+### How is it going
 
-This project is a starting point for a Flutter application.
+The app is displaying the initial page that contains the
+items the user can buy with icons do favorite it or add to
+cart.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Clicking the item will go to an empty page.
