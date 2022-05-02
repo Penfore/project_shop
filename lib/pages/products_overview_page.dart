@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_shop/components/badge.dart';
 import 'package:project_shop/components/product_grid.dart';
+import 'package:project_shop/models/cart.dart';
+import 'package:project_shop/utils/app_routes.dart';
+import 'package:provider/provider.dart';
 
 enum FilterOptions {
   favorite,
@@ -47,6 +51,18 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
                 }
               });
             },
+          ),
+          Consumer<Cart>(
+            child: IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.cart);
+              },
+              icon: const Icon(Icons.shopping_cart_rounded),
+            ),
+            builder: (ctx, cart, child) => Badge(
+              value: cart.itemsCount.toString(),
+              child: child!,
+            ),
           ),
         ],
       ),
