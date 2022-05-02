@@ -5,7 +5,7 @@ import 'package:project_shop/models/product.dart';
 class ProductList with ChangeNotifier {
   final List<Product> _items = dummyProducst;
 
-  List<Product> get items => [...items];
+  List<Product> get items => [..._items];
   List<Product> get favoriteItems =>
       _items.where((product) => product.isFavorite).toList();
 
