@@ -37,6 +37,10 @@ class MyApp extends StatelessWidget {
                 bodyText1: const TextStyle(
                   fontFamily: 'Lato',
                 ),
+                headline6: const TextStyle(
+                  fontFamily: 'Lato',
+                  color: Colors.white,
+                ),
               ),
         ),
         home: const ProductsOverviewPage(),
