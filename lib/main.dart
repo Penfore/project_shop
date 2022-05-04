@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
           textTheme: ThemeData().textTheme.copyWith(
                 bodyText1: const TextStyle(
                   fontFamily: 'Lato',
+                  color: Colors.white,
                 ),
                 headline6: const TextStyle(
                   fontFamily: 'Lato',
