@@ -47,7 +47,9 @@ class CartItemWidget extends StatelessWidget {
               child: FittedBox(
                 child: Text(
                   '${cartItem.price}',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                        color: Colors.white,
+                      ),
                 ),
               ),
             ),
