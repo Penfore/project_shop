@@ -9,3 +9,7 @@ items the user can buy with icons do favorite it or add to
 cart.
 
 Clicking the item will go to an empty page.
+
+### Known issues
+
+- The badge on top of the cart icon is not changing the numbers.
