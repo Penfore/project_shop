@@ -10,7 +10,18 @@ The app is displaying the initial page that contains the
 items the user can buy with icons do favorite it or add to
 cart.
 
-Clicking the item will go to an empty page.
+Clicking the item will show its details.
+
+You can click the favorite and cart icons to favorite the item
+and add it to cart (lol). The added itens can be seen clicking
+the cart icon on the top right of the screen.
+
+On the cart page you can see the information regarding the total
+price and quantity of each type of item. Clicking 'COMPRAR' will
+add this transaction to the Orders List.
+
+You can find the Orders List page by clicking the drawer on the 
+top left of the screen and click on 'Pedidos'.
 
 ### Known issues
 
