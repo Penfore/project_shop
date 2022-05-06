@@ -14,7 +14,7 @@ class ProductDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(product!.name!),
+        title: Text(product!.name),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -23,7 +23,7 @@ class ProductDetailPage extends StatelessWidget {
               height: 300,
               width: double.infinity,
               child: Image.network(
-                product.imageUrl!,
+                product.imageUrl,
                 fit: BoxFit.cover,
               ),
             ),
@@ -40,7 +40,7 @@ class ProductDetailPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: double.infinity,
               child: Text(
-                product.description!,
+                product.description,
                 textAlign: TextAlign.center,
               ),
             ),

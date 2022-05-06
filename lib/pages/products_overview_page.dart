@@ -60,16 +60,14 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
               },
               icon: const Icon(Icons.shopping_cart_rounded),
             ),
-            builder: (ctx, cart, child) => Badge(
+            builder: (context, cart, child) => Badge(
               value: cart.itemsCount.toString(),
               child: child!,
             ),
           ),
         ],
       ),
-      body: ProductGrid(
-        showFavoriteOnly: _showFavoriteOnly,
-      ),
+      body: ProductGrid(showFavoriteOnly: _showFavoriteOnly),
       drawer: const AppDrawer(),
     );
   }

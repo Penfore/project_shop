@@ -4,8 +4,8 @@ import 'package:project_shop/models/product.dart';
 import 'package:project_shop/utils/app_routes.dart';
 import 'package:provider/provider.dart';
 
-class ProductItem extends StatelessWidget {
-  const ProductItem({
+class ProductGridItem extends StatelessWidget {
+  const ProductGridItem({
     Key? key,
   }) : super(key: key);
 
@@ -24,7 +24,7 @@ class ProductItem extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           child: Image.network(
-            product.imageUrl!,
+            product.imageUrl,
             fit: BoxFit.cover,
           ),
           onTap: () {
@@ -48,16 +48,28 @@ class ProductItem extends StatelessWidget {
             ),
           ),
           title: Text(
-            product.name!,
+            product.name,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText1,
           ),
           trailing: IconButton(
-            onPressed: () {
-              cart.addItem(product);
-            },
             icon: const Icon(Icons.shopping_cart_rounded),
             color: Theme.of(context).colorScheme.secondary,
+            onPressed: () {
+              cart.addItem(product);
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text('Produto adicionado com sucesso!'),
+                  duration: const Duration(seconds: 3),
+                  action: SnackBarAction(
+                    label: 'DESFAZER',
+                    onPressed: () {
+                      cart.removeSingleItem(product.id);
+                    },
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ),
