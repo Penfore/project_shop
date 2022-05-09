@@ -18,12 +18,12 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(
               Icons.shop_rounded,
-              color: Colors.black,
+              color: Colors.grey,
             ),
             title: Text(
               'Loja',
               style: Theme.of(context).textTheme.headline6!.copyWith(
-                    color: Colors.black,
+                    color: Colors.grey,
                   ),
             ),
             onTap: () {
@@ -34,18 +34,35 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(
               Icons.payment_rounded,
-              color: Colors.black,
+              color: Colors.grey,
             ),
             title: Text(
               'Pedidos',
               style: Theme.of(context).textTheme.headline6!.copyWith(
-                    color: Colors.black,
+                    color: Colors.grey,
                   ),
             ),
             onTap: () {
               Navigator.of(context).pushReplacementNamed(AppRoutes.orders);
             },
           ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(
+              Icons.edit_rounded,
+              color: Colors.grey,
+            ),
+            title: Text(
+              'Gerenciar produtos',
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                    color: Colors.grey,
+                  ),
+            ),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(AppRoutes.products);
+            },
+          ),
+          const Divider(),
         ],
       ),
     );
